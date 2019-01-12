@@ -12,6 +12,7 @@
     {
         mysqli_query($con,"INSERT INTO day(`date`) VALUES ('$date')") or die("new date not updated");
     }
+    //vaitul bhyani
 ?>
 
 <!DOCTYPE html>
