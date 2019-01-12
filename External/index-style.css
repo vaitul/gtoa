@@ -1,0 +1,101 @@
+#mainpage{
+    background: #eee;
+}
+#header{
+    background-color: rgb(75, 75, 75);
+    color: aliceblue;
+    font-family: 'Staatliches', cursive;
+    border-radius: 0% 0% 15px 15px;
+    box-shadow: 1px 4px 3px #aaa;
+    transition: 0.1s linear;
+}
+
+#header h1{
+    margin:10px;
+}
+
+#date-label{
+    margin:10px -10px;
+    position: absolute;
+    font-size:12pt;
+}
+
+#admin-label{
+    margin:10px 5px;
+    position: absolute;
+    font-size:12pt;
+    right:0;
+    top:0;
+    text-align:right;
+}
+
+@media screen and (max-width: 767px) {
+  #admin-label {
+    font-size:10.3pt;
+  }
+  #date-label {
+    font-size:10.3pt;
+  }
+}
+
+
+#mainpage #result #post{
+    background-color: #ddd;
+    width: 100%;
+    height: 300px;
+}
+
+
+#post #time-stat{
+    background-color: #cccc00;
+    width: 95%;
+    transition: 1s linear;
+    height:5px;
+    overflow:hidden;
+    z-index: 9999;
+}
+#post #time-stat #result-stat{
+    background-color: #29a350;
+    height: 5px;
+    width: 90%;
+    overflow: hidden;
+    transition: 1s linear;
+}
+#post #time-stat:hover{
+    min-height: 25px;
+    font-family: 'Staatliches', cursive;
+    position: absolute;
+}
+#post #time-stat #result-stat:hover{
+    min-height: 20px;
+    font-family: 'Staatliches', cursive;
+}
+
+#post #day-title{
+    background:#cdcdcd;
+    font-size: 13pt;
+}
+#post #day-title b{
+    position:absolute; 
+    top:0;
+    margin:4px 3px;
+    z-index:1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
