@@ -1,6 +1,6 @@
 
 <?php
-    /*include "DBConnection.php";
+    include "DBConnection.php";
     $mycon = new DataBase();
     $con = $mycon->con;
 
@@ -11,7 +11,7 @@
     if(!($row[0] == $date))
     {
         mysqli_query($con,"INSERT INTO day(`date`) VALUES ('$date')") or die("new date not updated");
-    }*/
+    }
 ?>
 
 <!DOCTYPE html>
