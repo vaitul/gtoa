@@ -1,55 +1,90 @@
 body{
-    background: #FFEFBA;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #ccc;
 
 }
 #mainpage{
-background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);    min-height: 100vh;
+    margin-top:-50px;
+    padding-top: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height:100vh;
+    width: 100%;
+    background:#ddd;
 }
 #header{
-    background: #232526;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #333; 
     color: aliceblue;
-    font-family:cursive;
+    font-family: 'Roboto Slab', serif;
     border-radius: 0% 0% 15px 15px;
     box-shadow: 0px 2px 5px #888;
     transition: 0.1s linear;
     padding:0px 10px;
+    margin-bottom:10px;
+    margin-top:0px;
 }
 
 #header h1{
     color: #eee;
-    margin:10px;
+    margin-top:5px;
+    margin-bottom: 15px;
     font-family: 'Staatliches', cursive;
 }
 
 #notification-box{
-    background: #666;
+    background: #333;
     border-radius: 10px;
-    height: 0px;
+    min-height: 0;
+    transition:.3s linear;
+    background: #393939;
 }
-#notification-box .fa-chevron-down{
+#notification-box div{
+    padding:10px;;
     display: none;
+    text-align: center;
+}
+.descriptionArea{
+    background: #333;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 0px;
+    font-family: 'Roboto Slab', serif;
     font-size: 12pt;
-    padding:0px;
+    margin-top:30px;
+    transition: 1s linear;
+}
+
+.fa-chevron-down{
+    font-size: 15pt;
+    transition:.3s linear;
     position: absolute;
     bottom: 0;
 }
-#notification-box .fa-chevron-down:hover{
-    font-size: 12pt;
+.fa-chevron-down:hover{
     color:#b30000;
 }
-
+.btn{
+    font-size: 11pt;
+    background: #333;
+    border: 1px solid #eee;
+    margin: 10px;
+    width:60px;
+    padding:3px;
+    color: #eee;
+    font-weight: bold;
+}
+.btn:hover{
+    color: #333;
+    background: #eee;
+    border: 1px solid #eee;
+}
 #date-label{
-    margin:10px -10px;
+    margin:5px -10px;
     position: absolute;
     font-size:11pt;
 }
 
 #admin-label{
-    margin:10px 5px;
+    margin:5px 5px;
     position: absolute;
     font-size:11pt;
     right:0;
@@ -87,7 +122,7 @@ background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);    min-heig
 <!---------------Result-Post start---------------*/
 
 #post{
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     background-color: #f9f9f9;
     border-radius: 3px;
     box-shadow: 0px 0px 2px #777;
@@ -123,19 +158,30 @@ background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);    min-heig
 
 #day-title{
     border-bottom:1px solid #ddd;
-    background:#eee;
+    background:#333;
     font-size: 15pt;
     margin: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 7px;
     box-shadow: 0px 1px 2px #ddd;
     font-weight: bold;
-    font- family:  cursive;
+    color:#eee;
 }
-#day-title b{
+#day-title i{
+    font-size: 13pt;
     position:absolute; 
     top:0;
-    margin:0px 3px;
+    margin:4px 5px;
     z-index:1;
+    cursor: pointer;
+}
+#day-title i:hover{
+    color: #b3000a;
+}
+#day-title span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right:20px;
 }
 
 
@@ -151,26 +197,30 @@ background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);    min-heig
 }
 
 .subject{
-    padding: 5px;
     margin:5px 10px;
-    background: #f3f3f3;
+    background: #eee;
     border: 0px solid #ccc;
     border-radius: 4px;
-    box-shadow: 0px 0px 5px #777;
+    /*box-shadow: 0px 0px 5px #777;*/
+    border:1px solid #ccc;
 }
 
 .subject-heading{
     text-align: center;
     font-size: 12pt;
     font-weight: bolder;
-    background: #d9d9d9;
+    background: #dedede;
     margin-bottom: 10px;
     border-radius: 3px;
 }
+.sub-wrapper{
+    padding:5px;
+}
 
 .sub-desc{
-    height: 63px;
+    height: 50px;
     overflow-x: auto;
+    border-bottom: 1px solid #ddd;
 }
 
 #sub-time-stat{
@@ -182,23 +232,20 @@ background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);    min-heig
 }
 
 .stat{
-    background-blend-mode: lighten;
-    border-radius: 0px 2px 2px 0px;
-    text-align: end;
-    font-family: 'Staatliches', cursive;
-    height: 15px;
-    margin-top:5px;
-    font-size:9pt;
-    padding-right: 2px;
+    border-radius: 0px 100px 100px 0px;
+    text-align: right;
+    height: 5px;
+    margin-bottom:5px;
 }
 
 .wasted-labels{
+    font-family: 'Roboto Slab', serif;
     background: #ff8566;
     padding: 1px;
     border-radius: 3px;
     font-size: 9pt;
-    font-family:cursive;
     color: #fff;
+    min-width: 1px;
 }
 
 
